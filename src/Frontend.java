@@ -101,7 +101,7 @@ public class Frontend {
         frame.pack();
         frame.setVisible(true);
 
-
+        //http://stackoverflow.com/questions/7670355/convert-date-time-for-given-timezone-java
         Calendar calendar = new GregorianCalendar(TimeZone.getTimeZone("GMT"));
 
         DateFormat formatter = new SimpleDateFormat("HH:mm:ss");
