@@ -53,15 +53,41 @@ public class Frontend {
 
                 try {
                     String country1 = list1.getSelectedValue().toString();
-                    if( country1 == "England"){country1 = "GBP";}
+                    if( country1 == "United Kingdom"){country1 = "GBP";}
+                    else if(country1 == "Spain"){country1 = "EUR";}
+                    else if(country1 == "Sweden"){country1 = "SEK";}
                     else if(country1 == "Germany"){country1 = "EUR";}
                     else if(country1 == "Japan"){country1 = "JPY";}
+                    else if(country1 == "Canada"){country1 = "CAD";}
+                    else if(country1 == "United States of America"){country1 = "USD";}
+                    else if(country1 == "China"){country1 = "CHY";}
+                    else if(country1 == "Russia"){country1 = "RUB";}
+                    else if(country1 == "Bulgaria"){country1 = "BGN";}
+                    else if(country1 == "Croatia"){country1 = "HRK";}
+                    else if(country1 == "Czech Republic"){country1 = "CZK";}
+                    else if(country1 == "Denmark"){country1 = "DKK";}
+                    else if(country1 == "Hungary"){country1 = "HUF";}
+                    else if(country1 == "Poland"){country1 = "PLN";}
+                    else if(country1 == "Romania"){country1 = "RON";}
+
 
                     String country2 = list2.getSelectedValue().toString();
-                    if( country2 == "England"){country2 = "GBP";}
-                    else if(country2 == "Germany"){country2 = "EUR";}
-                    else if(country2 == "Japan"){country2 = "JPY";}
-
+                    if( country1 == "United Kingdom"){country1 = "GBP";}
+                    else if(country1 == "Spain"){country1 = "EUR";}
+                    else if(country1 == "Sweden"){country1 = "SEK";}
+                    else if(country1 == "Germany"){country1 = "EUR";}
+                    else if(country1 == "Japan"){country1 = "JPY";}
+                    else if(country1 == "Canada"){country1 = "CAD";}
+                    else if(country1 == "United States of America"){country1 = "USD";}
+                    else if(country1 == "China"){country1 = "CHY";}
+                    else if(country1 == "Russia"){country1 = "RUB";}
+                    else if(country1 == "Bulgaria"){country1 = "BGN";}
+                    else if(country1 == "Croatia"){country1 = "HRK";}
+                    else if(country1 == "Czech Republic"){country1 = "CZK";}
+                    else if(country1 == "Denmark"){country1 = "DKK";}
+                    else if(country1 == "Hungary"){country1 = "HUF";}
+                    else if(country1 == "Poland"){country1 = "PLN";}
+                    else if(country1 == "Romania"){country1 = "RON";}
                     //user inputting a value to be converted
 
 
