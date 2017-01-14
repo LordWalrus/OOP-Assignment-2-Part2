@@ -50,7 +50,7 @@ public class Frontend {
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+// List of all the countries that the user can choose from to compare
                 try {
                     String country1 = list1.getSelectedValue().toString();
                     if( country1 == "United Kingdom"){country1 = "GBP";}
@@ -88,8 +88,6 @@ public class Frontend {
                     else if(country1 == "Hungary"){country1 = "HUF";}
                     else if(country1 == "Poland"){country1 = "PLN";}
                     else if(country1 == "Romania"){country1 = "RON";}
-                    //user inputting a value to be converted
-
 
 
                     Compare(country1, country2);
@@ -100,7 +98,7 @@ public class Frontend {
         });
 
 
-        //user inputting a value to be converted
+        //User inputting a value to be converted
         //James - place label above the currency and give a title
         button2.addActionListener(new ActionListener() {
             @Override
@@ -108,9 +106,9 @@ public class Frontend {
 
                 double convert = Double.parseDouble(ConversionRate.getText());
                 double userInput = Double.parseDouble(textField1.getText());
-                //converted1 is the first value converted to the second contry
+                //Converted1 is the first value converted to the second country
                 double converted1 = (convert * userInput);
-                //converted rounds the value to  decimal places
+                //Converted rounds the value to  decimal places
                 double converted = Math.round(converted1*100)/100.00;
                 currency1.setText(converted+"");
 
