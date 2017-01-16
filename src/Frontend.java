@@ -8,11 +8,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.GregorianCalendar;
-import java.util.TimeZone;
 
 //http://stackoverflow.com/questions/11005751/is-there-a-util-to-convert-us-state-name-to-state-code-eg-arizona-to-az/11006236#11006236
 //USA - (State)
@@ -22,6 +17,7 @@ import java.util.TimeZone;
 /**
  * Created by Sean on 17/12/2016.
  */
+// GUI was made by Sean and was beautified by James
 public class Frontend {
     private JList list1;
     private JList list2;
@@ -60,7 +56,6 @@ public class Frontend {
                     else if(country1 == "Japan"){country1 = "JPY";}
                     else if(country1 == "Canada"){country1 = "CAD";}
                     else if(country1 == "United States of America"){country1 = "USD";}
-                    else if(country1 == "China"){country1 = "CHY";}
                     else if(country1 == "Russia"){country1 = "RUB";}
                     else if(country1 == "Bulgaria"){country1 = "BGN";}
                     else if(country1 == "Croatia"){country1 = "HRK";}
@@ -72,22 +67,21 @@ public class Frontend {
 
 
                     String country2 = list2.getSelectedValue().toString();
-                    if( country1 == "United Kingdom"){country1 = "GBP";}
-                    else if(country1 == "Spain"){country1 = "EUR";}
-                    else if(country1 == "Sweden"){country1 = "SEK";}
-                    else if(country1 == "Germany"){country1 = "EUR";}
-                    else if(country1 == "Japan"){country1 = "JPY";}
-                    else if(country1 == "Canada"){country1 = "CAD";}
-                    else if(country1 == "United States of America"){country1 = "USD";}
-                    else if(country1 == "China"){country1 = "CHY";}
-                    else if(country1 == "Russia"){country1 = "RUB";}
-                    else if(country1 == "Bulgaria"){country1 = "BGN";}
-                    else if(country1 == "Croatia"){country1 = "HRK";}
-                    else if(country1 == "Czech Republic"){country1 = "CZK";}
-                    else if(country1 == "Denmark"){country1 = "DKK";}
-                    else if(country1 == "Hungary"){country1 = "HUF";}
-                    else if(country1 == "Poland"){country1 = "PLN";}
-                    else if(country1 == "Romania"){country1 = "RON";}
+                    if( country2 == "United Kingdom"){country2 = "GBP";}
+                    else if(country2 == "Spain"){country2 = "EUR";}
+                    else if(country2 == "Sweden"){country2 = "SEK";}
+                    else if(country2 == "Germany"){country2 = "EUR";}
+                    else if(country2 == "Japan"){country2 = "JPY";}
+                    else if(country2 == "Canada"){country2 = "CAD";}
+                    else if(country2 == "United States of America"){country2 = "USD";}
+                    else if(country2 == "Russia"){country2 = "RUB";}
+                    else if(country2 == "Bulgaria"){country2 = "BGN";}
+                    else if(country2 == "Croatia"){country2 = "HRK";}
+                    else if(country2 == "Czech Republic"){country2 = "CZK";}
+                    else if(country2 == "Denmark"){country2 = "DKK";}
+                    else if(country2 == "Hungary"){country2 = "HUF";}
+                    else if(country2 == "Poland"){country2 = "PLN";}
+                    else if(country2 == "Romania"){country2 = "RON";}
 
 
                     Compare(country1, country2);
@@ -124,14 +118,15 @@ public class Frontend {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+        frame.setMinimumSize( frame.getSize());
 
         //http://stackoverflow.com/questions/7670355/convert-date-time-for-given-timezone-java
-        Calendar calendar = new GregorianCalendar(TimeZone.getTimeZone("GMT"));
+        /*Calendar calendar = new GregorianCalendar(TimeZone.getTimeZone("GMT"));
 
         DateFormat formatter = new SimpleDateFormat("HH:mm:ss");
         formatter.setTimeZone(TimeZone.getTimeZone("GMT+13"));
 
-        //String newZealandTime = formatter.format(calendar.getTime());
+        String newZealandTime = formatter.format(calendar.getTime());*/
 
     }
 
