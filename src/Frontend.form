@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="Frontend">
-  <grid id="27dc6" binding="Container" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="true" same-size-vertically="true" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="Container" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="0" left="0" bottom="0" right="0"/>
     <constraints>
-      <xy x="583" y="78" width="546" height="965"/>
+      <xy x="583" y="78" width="744" height="1349"/>
     </constraints>
     <properties>
-      <background color="-16777216"/>
+      <background color="-3670016"/>
     </properties>
     <border type="none"/>
     <children>
@@ -16,7 +16,7 @@
           <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-1571827"/>
+          <background color="-16777216"/>
         </properties>
         <border type="none"/>
         <children>
@@ -27,7 +27,9 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-1571827"/>
+              <background color="-16777216"/>
+              <font name="Arial" size="14"/>
+              <foreground color="-1"/>
               <model>
                 <item value="Bulgaria"/>
                 <item value="Canada"/>
@@ -52,10 +54,12 @@
           </component>
           <component id="cfa51" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Select Country"/>
+              <font name="Arial" size="20" style="1"/>
+              <foreground color="-3670016"/>
+              <text value="Select Country 1"/>
             </properties>
           </component>
         </children>
@@ -66,7 +70,7 @@
           <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <background color="-1571827"/>
+          <background color="-16777216"/>
         </properties>
         <border type="none"/>
         <children>
@@ -77,7 +81,9 @@
               </grid>
             </constraints>
             <properties>
-              <background color="-1571827"/>
+              <background color="-16777216"/>
+              <font name="Arial" size="14"/>
+              <foreground color="-1"/>
               <model>
                 <item value="Bulgaria"/>
                 <item value="Canada"/>
@@ -101,71 +107,119 @@
           </component>
           <component id="4b36f" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Select Country"/>
+              <background color="-16777216"/>
+              <font name="Arial" size="20" style="1"/>
+              <foreground color="-3670016"/>
+              <text value="Select Country 2"/>
             </properties>
           </component>
         </children>
       </grid>
-      <grid id="abfc8" binding="Container3" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="abfc8" binding="Container3" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <maximum-size width="-1" height="100"/>
+          </grid>
         </constraints>
         <properties>
-          <background color="-1571827"/>
+          <background color="-15790321"/>
         </properties>
         <border type="none"/>
         <children>
           <component id="7e979" class="javax.swing.JTextField" binding="textField1" default-binding="true">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                 <preferred-size width="150" height="-1"/>
               </grid>
             </constraints>
             <properties>
-              <background color="-1571827"/>
+              <background color="-15790321"/>
+              <font name="Arial" size="20"/>
+              <foreground color="-1"/>
             </properties>
           </component>
+          <component id="df574" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font name="Arial" size="20" style="1"/>
+              <foreground color="-3670016"/>
+              <text value="Input Amount"/>
+            </properties>
+          </component>
+          <vspacer id="63854">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
         </children>
       </grid>
-      <grid id="12203" binding="Container4" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="12203" binding="Container4" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <maximum-size width="-1" height="100"/>
+          </grid>
         </constraints>
         <properties>
-          <background color="-1571827"/>
+          <background color="-15790321"/>
         </properties>
         <border type="none"/>
         <children>
-          <component id="c8581" class="javax.swing.JLabel" binding="currency1">
+          <component id="1931c" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Label"/>
+              <background color="-16777216"/>
+              <font name="Arial" size="20" style="1"/>
+              <foreground color="-3670016"/>
+              <text value="New Amount"/>
             </properties>
           </component>
+          <component id="c8581" class="javax.swing.JLabel" binding="currency1">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-16777216"/>
+              <font name="Arial" size="20"/>
+              <foreground color="-1"/>
+              <text value="Output Shows Here"/>
+            </properties>
+          </component>
+          <vspacer id="bc8dd">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
         </children>
       </grid>
-      <grid id="9a002" binding="Container5" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+      <grid id="9a002" binding="Container5" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <maximum-size width="-1" height="100"/>
+          </grid>
         </constraints>
         <properties>
-          <background color="-1571827"/>
+          <background color="-15790321"/>
         </properties>
         <border type="none"/>
         <children>
           <component id="91ae1" class="javax.swing.JLabel" binding="ConversionRate">
             <constraints>
-              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <background color="-16777216"/>
+              <font name="Arial" size="20"/>
+              <foreground color="-1"/>
               <text value="Label"/>
             </properties>
           </component>
@@ -177,15 +231,22 @@
               <text value="Button"/>
             </properties>
           </component>
+          <vspacer id="bd9ec">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </vspacer>
         </children>
       </grid>
       <grid id="cf448" binding="Container6" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <maximum-size width="-1" height="100"/>
+          </grid>
         </constraints>
         <properties>
-          <background color="-1571827"/>
+          <background color="-16777216"/>
         </properties>
         <border type="none"/>
         <children>
@@ -194,6 +255,7 @@
               <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <foreground color="-1"/>
               <text value="Label"/>
             </properties>
           </component>
@@ -202,6 +264,7 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <foreground color="-1"/>
               <text value="Label"/>
             </properties>
           </component>
@@ -215,10 +278,12 @@
       <grid id="4bab8" binding="Container7" layout-manager="GridLayoutManager" row-count="2" column-count="2" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <maximum-size width="-1" height="100"/>
+          </grid>
         </constraints>
         <properties>
-          <background color="-1571827"/>
+          <background color="-16777216"/>
         </properties>
         <border type="none"/>
         <children>
@@ -227,6 +292,7 @@
               <grid row="1" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <foreground color="-1"/>
               <text value="Label"/>
             </properties>
           </component>
@@ -240,6 +306,7 @@
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <foreground color="-1"/>
               <text value="Label"/>
             </properties>
           </component>
@@ -248,10 +315,12 @@
       <grid id="643ec" binding="Container8" layout-manager="GridLayoutManager" row-count="2" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false">
+            <maximum-size width="-1" height="100"/>
+          </grid>
         </constraints>
         <properties>
-          <background color="-1571827"/>
+          <background color="-16777216"/>
         </properties>
         <border type="none"/>
         <children>
@@ -260,6 +329,7 @@
               <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
+              <foreground color="-1"/>
               <text value="Label"/>
             </properties>
           </component>
