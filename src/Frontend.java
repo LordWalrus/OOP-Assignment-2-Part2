@@ -8,6 +8,11 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.TimeZone;
 
 //http://stackoverflow.com/questions/11005751/is-there-a-util-to-convert-us-state-name-to-state-code-eg-arizona-to-az/11006236#11006236
 //USA - (State)
@@ -29,15 +34,13 @@ public class Frontend {
     private JPanel Container5;
     private JPanel Container6;
     private JPanel Container7;
-    private JPanel Container8;
     private JLabel Currency;
     private JLabel currency1;
     private JLabel ConversionRate;
     private JLabel Time;
-    private JLabel Time1;
-    private JLabel TimeDifferences;
-    private JLabel DigitalClock;
-    private JLabel DigitalClock1;
+    private JLabel Time2;
+    private JLabel TImeZone;
+    private JLabel TImeZone1;
     private JButton button1;
     private JTextField textField1;
     private JButton button2;
@@ -49,43 +52,137 @@ public class Frontend {
 // List of all the countries that the user can choose from to compare
                 try {
                     String country1 = list1.getSelectedValue().toString();
-                    if( country1 == "United Kingdom"){country1 = "GBP";}
-                    else if(country1 == "Spain"){country1 = "EUR";}
-                    else if(country1 == "Sweden"){country1 = "SEK";}
-                    else if(country1 == "Germany"){country1 = "EUR";}
-                    else if(country1 == "Japan"){country1 = "JPY";}
-                    else if(country1 == "Canada"){country1 = "CAD";}
-                    else if(country1 == "United States of America"){country1 = "USD";}
-                    else if(country1 == "Russia"){country1 = "RUB";}
-                    else if(country1 == "Bulgaria"){country1 = "BGN";}
-                    else if(country1 == "Croatia"){country1 = "HRK";}
-                    else if(country1 == "Czech Republic"){country1 = "CZK";}
-                    else if(country1 == "Denmark"){country1 = "DKK";}
-                    else if(country1 == "Hungary"){country1 = "HUF";}
-                    else if(country1 == "Poland"){country1 = "PLN";}
-                    else if(country1 == "Romania"){country1 = "RON";}
-
+                    String time1 = "";
+                    if( country1 == "United Kingdom"){
+                        country1 = "GBP";
+                        time1 = "GMT+0";
+                    }
+                    else if(country1 == "Spain"){
+                        country1 = "EUR";
+                        time1 = "GMT+1";
+                    }
+                    else if(country1 == "Sweden"){
+                        country1 = "SEK";
+                        time1 = "GMT+1";
+                    }
+                    else if(country1 == "Germany"){
+                        country1 = "EUR";
+                        time1 = "GMT+1";
+                    }
+                    else if(country1 == "Japan"){
+                        country1 = "JPY";
+                        time1 = "GMT+9";
+                    }
+                    else if(country1 == "Canada"){
+                        country1 = "CAD";
+                        time1 = "GMT-6";
+                    }
+                    else if(country1 == "United States of America"){
+                        country1 = "USD";
+                        time1 = "GMT-6";
+                    }
+                    else if(country1 == "Russia"){
+                        country1 = "RUB";
+                        time1 = "GMT+3";
+                    }
+                    else if(country1 == "Bulgaria"){
+                        country1 = "BGN";
+                        time1 = "GMT+2";
+                    }
+                    else if(country1 == "Croatia"){
+                        country1 = "HRK";
+                        time1 = "GMT+1";
+                    }
+                    else if(country1 == "Czech Republic"){
+                        country1 = "CZK";
+                        time1 = "GMT+2";
+                    }
+                    else if(country1 == "Denmark"){
+                        country1 = "DKK";
+                        time1 = "GMT+1";
+                    }
+                    else if(country1 == "Hungary"){
+                        country1 = "HUF";
+                        time1 = "GMT+1";
+                    }
+                    else if(country1 == "Poland"){
+                        country1 = "PLN";
+                        time1 = "GMT+1";
+                    }
+                    else if(country1 == "Romania"){
+                        country1 = "RON";
+                        time1 = "GMT+3";
+                    }
 
                     String country2 = list2.getSelectedValue().toString();
-                    if( country2 == "United Kingdom"){country2 = "GBP";}
-                    else if(country2 == "Spain"){country2 = "EUR";}
-                    else if(country2 == "Sweden"){country2 = "SEK";}
-                    else if(country2 == "Germany"){country2 = "EUR";}
-                    else if(country2 == "Japan"){country2 = "JPY";}
-                    else if(country2 == "Canada"){country2 = "CAD";}
-                    else if(country2 == "United States of America"){country2 = "USD";}
-                    else if(country2 == "Russia"){country2 = "RUB";}
-                    else if(country2 == "Bulgaria"){country2 = "BGN";}
-                    else if(country2 == "Croatia"){country2 = "HRK";}
-                    else if(country2 == "Czech Republic"){country2 = "CZK";}
-                    else if(country2 == "Denmark"){country2 = "DKK";}
-                    else if(country2 == "Hungary"){country2 = "HUF";}
-                    else if(country2 == "Poland"){country2 = "PLN";}
-                    else if(country2 == "Romania"){country2 = "RON";}
+                    String time2 = "";
+                    if( country2 == "United Kingdom"){
+                        country2 = "GBP";
+                        time2 = "GMT+0";
+                    }
+                    else if(country2 == "Spain"){
+                        country2 = "EUR";
+                        time2 = "GMT+1";
+                    }
+                    else if(country2 == "Sweden"){
+                        country2 = "SEK";
+                        time2 = "GMT+1";
+                    }
+                    else if(country2 == "Germany"){
+                        country2 = "EUR";
+                        time2 = "GMT+1";
+                    }
+                    else if(country2 == "Japan"){
+                        country2 = "JPY";
+                        time2 = "GMT+9";
+                    }
+                    else if(country2 == "Canada"){
+                        country2 = "CAD";
+                        time2 = "GMT-6";
+                    }
+                    else if(country2 == "United States of America"){
+                        country2 = "USD";
+                        time2 = "GMT-6";
+                    }
+                    else if(country2 == "Russia"){
+                        country2 = "RUB";
+                        time2 = "GMT+3";
+                    }
+                    else if(country2 == "Bulgaria"){
+                        country2 = "BGN";
+                        time2 = "GMT+2";
+                    }
+                    else if(country2 == "Croatia"){
+                        country2 = "HRK";
+                        time2 = "GMT+1";
+                    }
+                    else if(country2 == "Czech Republic"){
+                        country2 = "CZK";
+                        time2 = "GMT+2";
+                    }
+                    else if(country2 == "Denmark"){
+                        country2 = "DKK";
+                        time2 = "GMT+1";
+                    }
+                    else if(country2 == "Hungary"){
+                        country2 = "HUF";
+                        time2 = "GMT+1";
+                    }
+                    else if(country2 == "Poland"){
+                        country2 = "PLN";
+                        time2 = "GMT+1";
+                    }
+                    else if(country2 == "Romania"){
+                        country2 = "RON";
+                        time2 = "GMT+3";
+                    }
 
+                    timeZone(time1, time2);
 
                     Compare(country1, country2);
                 }catch(Exception error){
+
+
 
                 }
             }
@@ -98,13 +195,18 @@ public class Frontend {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                double convert = Double.parseDouble(ConversionRate.getText());
-                double userInput = Double.parseDouble(textField1.getText());
-                //Converted1 is the first value converted to the second country
-                double converted1 = (convert * userInput);
-                //Converted rounds the value to  decimal places
-                double converted = Math.round(converted1*100)/100.00;
-                currency1.setText(converted+"");
+                try {
+                    double convert = Double.parseDouble(ConversionRate.getText());
+                    double userInput = Double.parseDouble(textField1.getText());
+                    //Converted1 is the first value converted to the second country
+                    double converted1 = (convert * userInput);
+                    //Converted rounds the value to  decimal places
+                    double converted = Math.round(converted1 * 100) / 100.00;
+                    currency1.setText(converted + "");
+                }catch(Exception error){
+                    JOptionPane.showMessageDialog(null, "Input currency!");
+
+                }
 
 
 
@@ -118,15 +220,30 @@ public class Frontend {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-        frame.setMinimumSize( frame.getSize());
+        frame.setMinimumSize(frame.getSize());
+    }
 
-        //http://stackoverflow.com/questions/7670355/convert-date-time-for-given-timezone-java
-        /*Calendar calendar = new GregorianCalendar(TimeZone.getTimeZone("GMT"));
 
-        DateFormat formatter = new SimpleDateFormat("HH:mm:ss");
-        formatter.setTimeZone(TimeZone.getTimeZone("GMT+13"));
+        public void timeZone(String timeOne, String timeTwo){
 
-        String newZealandTime = formatter.format(calendar.getTime());*/
+            System.out.println(timeOne);
+
+
+            Calendar calendar = new GregorianCalendar(TimeZone.getTimeZone("GMT"));
+
+            DateFormat formatter = new SimpleDateFormat("dd MMM yyyy HH:mm:ss z");
+            formatter.setTimeZone(TimeZone.getTimeZone(timeOne));
+
+            DateFormat formatter1 = new SimpleDateFormat("dd MMM yyyy HH:mm:ss z");
+            formatter.setTimeZone(TimeZone.getTimeZone(timeTwo));
+
+            String TimeOutput1 = formatter.format(calendar.getTime());
+            String TimeOutput2 = formatter1.format(calendar.getTime());
+
+            Time.setText(TimeOutput2);
+            Time2.setText(TimeOutput1);
+
+
 
     }
 
