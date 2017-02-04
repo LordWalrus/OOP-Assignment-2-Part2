@@ -49,7 +49,7 @@ public class Frontend {
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-// List of all the countries that the user can choose from to compare
+// List of all the countries that the user can choose from to compare - Started by Chris finished by Sean
                 try {
                     String country1 = list1.getSelectedValue().toString();
                     String time1 = "";
@@ -177,8 +177,11 @@ public class Frontend {
                         time2 = "GMT+3";
                     }
 
+
+                    // localise the time1 and time2 by calling it from further down
                     timeZone(time1, time2);
 
+                    // Same as the above
                     Compare(country1, country2);
                 }catch(Exception error){
 
@@ -189,8 +192,8 @@ public class Frontend {
         });
 
 
-        //User inputting a value to be converted
-        //James - place label above the currency and give a title
+        //User inputting a value to be converted. - Chris
+        // Labels added to help identify what is what by James.
         button2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -224,6 +227,8 @@ public class Frontend {
     }
 
 
+        // This is what make the time work by using the computer system clock and adding or taking away by whatever amount. - Sean
+
         public void timeZone(String timeOne, String timeTwo){
 
             System.out.println(timeOne);
@@ -247,6 +252,7 @@ public class Frontend {
 
     }
 
+    // The Yahoo api within the link it parsed by the Json to convert the currency depending on the countries selected. - Sean and James
     public void Compare(String CountryOne, String CountryTwo) throws Exception{
 
         URL url = new URL("http://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20(%22"+CountryOne+CountryTwo+"%22)&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys&callback=");
@@ -271,6 +277,8 @@ public class Frontend {
        parseJson(response.toString());
 
     }
+
+    //This is the Json which runs the yahoo api for the currency converter. - Sean and James
 
     public void parseJson(String rawJson) throws JSONException {
 
