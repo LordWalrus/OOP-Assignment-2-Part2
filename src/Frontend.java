@@ -2,6 +2,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -44,6 +45,8 @@ public class Frontend {
     private JButton button1;
     private JTextField textField1;
     private JButton button2;
+    private JButton button3;
+    private JButton decreaseFontSizeButton;
 
     public Frontend() {
         button1.addActionListener(new ActionListener() {
@@ -213,6 +216,65 @@ public class Frontend {
 
 
 
+            }
+        });
+
+
+        // This action listener increase the text size for the hard of sight.
+        button3.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                Font font = list1.getFont();
+                float size = font.getSize() + 1.0f;
+                list1.setFont( font.deriveFont(size) );
+
+                Font font1 = list2.getFont();
+                float size1 = font.getSize() + 1.0f;
+                list2.setFont( font.deriveFont(size) );
+
+                Font font2 = Time.getFont();
+                float size2 = font.getSize() + 1.0f;
+                Time.setFont( font.deriveFont(size) );
+
+                Font font3 = Time2.getFont();
+                float size3 = font.getSize() + 1.0f;
+                Time2.setFont( font.deriveFont(size) );
+
+                Font font4 = textField1.getFont();
+                float size4 = font.getSize() + 1.0f;
+                textField1.setFont( font.deriveFont(size) );
+
+
+            }
+        });
+
+
+        // This action listener decreases the size of the text.
+        decreaseFontSizeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+
+                Font font = list1.getFont();
+                float size = font.getSize() - 1.0f;
+                list1.setFont( font.deriveFont(size) );
+
+                Font font1 = list2.getFont();
+                float size1 = font.getSize() - 1.0f;
+                list2.setFont( font.deriveFont(size) );
+
+                Font font2 = Time.getFont();
+                float size2 = font.getSize() - 1.0f;
+                Time.setFont( font.deriveFont(size) );
+
+                Font font3 = Time2.getFont();
+                float size3 = font.getSize() - 1.0f;
+                Time2.setFont( font.deriveFont(size) );
+
+                Font font4 = textField1.getFont();
+                float size4 = font.getSize() - 1.0f;
+                textField1.setFont( font.deriveFont(size) );
             }
         });
     }
